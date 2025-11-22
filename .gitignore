@@ -1,0 +1,14 @@
+# Rust
+/target/
+**/*.rs.bk
+*.exe
+*.so
+*.dylib
+*.dll
+/coverage/
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+Cargo.lock

@@ -1,0 +1,13 @@
+[package]
+name = "image_to_ascii"
+version = "0.1.0"
+edition = "2024"
+description = "A fast and colorful Rust CLI tool to convert images into ASCII or Unicode art directly in your terminal."
+license = "MIT"
+authors = ["Lukas Metzler <lukasxmetzler@gmail.com"]
+repository = "https://github.com/lukasmetzler/image_to_ascii"
+
+[dependencies]
+clap = { version = "4.5.53", features = ["derive"] }
+colored = "3.0.0"
+image = "0.25.9"
