@@ -1,6 +1,6 @@
 # image_to_ascii: Terminal Image to ASCII/Unicode Art Converter
 
-[![Language](https://img.shields.io/badge/language-Rust-orange?logo=rust)](https://www.rust-lang.org/) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Platform](https://img.shields.io/badge/platform-Terminal-lightgrey)](#)
+[![Language](https://img.shields.io/badge/language-Rust-orange?logo=rust)](https://www.rust-lang.org/) [![Build](https://github.com/lukasmetzler/image_to_ascii/actions/workflows/release.yml/badge.svg)](https://github.com/lukasmetzler/image_to_ascii/actions/workflows/release.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Platform](https://img.shields.io/badge/platform-Terminal-lightgrey)](#)
 
 A fast and colorful Rust CLI tool to convert images into ASCII or Unicode art directly in your terminal!
 
@@ -43,6 +43,35 @@ cargo run --release -- -i assets/index.png -w 100 -m blocks -b -c 1.2
    cargo run --release -- --image path/to/image.png
    ```
 
+## Download & Release
+
+Pre-built binaries for Linux, macOS, and Windows are available on the [Releases page](https://github.com/lukasmetzler/image_to_ascii/releases).
+
+### Quick Install (Linux/macOS)
+
+You can install the CLI globally as `image-to-ascii`:
+
+```sh
+# Download (replace VERSION with the latest version, e.g. v0.1.0)
+curl -Lo image-to-ascii \
+  https://github.com/lukasmetzler/image_to_ascii/releases/download/VERSION/image_to_ascii-linux-amd64
+chmod +x image-to-ascii
+sudo mv image-to-ascii /usr/local/bin/
+# Now you can run it from anywhere:
+image-to-ascii --help
+```
+
+### Quick Install (Windows)
+
+1. Download `image-to-ascii-windows-amd64.exe` from the [Releases page](https://github.com/lukasmetzler/image_to_ascii/releases).
+2. Rename it to `image-to-ascii.exe` (optional, for consistency).
+3. Move it to a folder in your `PATH` (e.g. `C:\Windows\System32` or add a custom folder to your PATH).
+4. Now you can run:
+
+```sh
+image-to-ascii.exe --help
+```
+
 ## Usage
 
 ```
@@ -75,19 +104,19 @@ OPTIONS:
 
 - Basic usage:
   ```sh
-  cargo run --release -- --image assets/index.png
+  ./image_to_ascii-linux-amd64 --image assets/index.png
   ```
 - Use Unicode blocks and invert colors:
   ```sh
-  cargo run --release -- --image assets/index.png --mode blocks --invert
+  ./image_to_ascii-linux-amd64 --image assets/index.png --mode blocks --invert
   ```
 - Set width and enable background:
   ```sh
-  cargo run --release -- --image assets/index.png --width 80 --background
+  ./image_to_ascii-linux-amd64 --image assets/index.png --width 80 --background
   ```
 - Increase contrast:
   ```sh
-  cargo run --release -- --image assets/index.png --contrast 1.5
+  ./image_to_ascii-linux-amd64 --image assets/index.png --contrast 1.5
   ```
 
 ## Palettes
